@@ -334,7 +334,18 @@
   .tl-detail a.ref{
     color:var(--blue-light);font-size:14px;text-decoration:underline;text-underline-offset:3px;
   }
-
+/* education: documents */
+.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.doc-card{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02);text-decoration:none;color:var(--text);transition:transform .25s ease,border-color .25s ease,background .25s ease;}
+.doc-card:hover{transform:translateY(-3px);border-color:rgba(111,179,236,.45);background:rgba(47,111,214,.08);}
+.doc-ico{flex:none;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(140deg,rgba(47,111,214,.3),rgba(47,111,214,.08));border:1px solid rgba(111,179,236,.32);}
+.doc-ico svg{width:20px;height:20px;stroke:var(--cyan);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.doc-text b{display:block;font-size:15px;font-weight:700;}
+.doc-text span{display:block;font-size:13px;color:var(--text-dim);margin-top:2px;}
+.doc-card::after{content:"\2197";margin-left:auto;color:var(--text-faint);transition:color .2s ease;}
+.doc-card:hover::after{color:var(--cyan);}
+@media (max-width:1000px){.doc-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.doc-grid{grid-template-columns:1fr;}}
   /* ---------- work / projects intro ---------- */
   .work-intro{max-width:640px;margin:0 0 70px;}
 
